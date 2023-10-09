@@ -32,6 +32,7 @@
 ## 3. Docs
 
 #### mkdocs 
+
 - Install
     ```
     pip install mkdocs
@@ -61,4 +62,17 @@
     mkdocs gh-deploy
     ```
     Then, you can see the mkdocs pages at `https://<github ID>.github.io/<repository name>`
-##  
+
+#### sphinx
+
+## 4. unit tests
+
+- Install
+    ```
+    pip install coverage pytest-cov
+    ```
+
+- Execute
+    ```
+    pytest --cov
+    ```
