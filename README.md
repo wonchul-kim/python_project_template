@@ -5,7 +5,44 @@
 - [x] README.md
 - [x] .gitignore
 
-## 2. Settings for a package
+## 2. Code style/format in the process of pre-commit
+
+- [x] .pre-commit-config.yaml
+
+  - [x] pre-commit-hooks
+  - [x] pyupgrade
+  - [x] isort
+  - [x] yapf
+  - [x] black
+  - [x] mdformat
+  - [x] autoflake
+  - [x] flake8
+  - [x] codespell
+  - [x] docformatter
+
+- Apply .pre-commit-config.yaml
+
+  ```
+  pre-commit install
+  ```
+
+  Then, pre-commit-config configuration will be defined in .git
+
+## 3. unit tests
+
+- Install
+
+  ```
+  pip install coverage pytest-cov
+  ```
+
+- Execute
+
+  ```
+  pytest --cov
+  ```
+
+## 4. Settings for a package
 
 - [x] project folder with `__init__.py` including `__version__`
 - [x] requirements.txt
@@ -31,21 +68,7 @@
 
   > reference: https://pypa-build.readthedocs.io/en/stable/
 
-## 3. unit tests
-
-- Install
-
-  ```
-  pip install coverage pytest-cov
-  ```
-
-- Execute
-
-  ```
-  pytest --cov
-  ```
-
-## 4. Docs
+## 5. Docs
 
 #### mkdocs
 
@@ -116,26 +139,3 @@
   Then, you can see the mkdocs pages at `https://<github ID>.github.io/<repository name>`
 
 #### sphinx
-
-## 5. Code style/format in the process of pre-commit
-
-- [x] .pre-commit-config.yaml
-
-  - [x] pre-commit-hooks
-  - [x] pyupgrade
-  - [x] isort
-  - [x] yapf
-  - [x] black
-  - [x] mdformat
-  - [x] autoflake
-  - [x] flake8
-  - [x] codespell
-  - [x] docformatter
-
-- Apply .pre-commit-config.yaml
-
-  ```
-  pre-commit install
-  ```
-
-  Then, pre-commit-config configuration will be defined in .git
