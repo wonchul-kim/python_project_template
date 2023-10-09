@@ -1,0 +1,12 @@
+site_name: Project
+
+theme:
+  name: 'material'
+
+plugins:
+  - mkdocstrings
+
+nav:
+  - main: index.md
+  - project: project.md
+  - calculation: calculation.md

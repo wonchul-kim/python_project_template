@@ -29,6 +29,31 @@
     This is same to ```python setup.py bdist_wheel```
     > reference: https://pypa-build.readthedocs.io/en/stable/
 
-## 3. Consider code style/format
+## 3. Docs
+
+#### mkdocs 
+- Install
+    ```
+    pip install mkdocs
+    ```
+
+- Start mkdocs
+    ```
+    mkdocs new .
+    ```
+    or you can make mkdocs on each project fodler using ```mkdocs new <project folder>```
+
+- Select theme
+    in the `mkdocs.yml`, you can define theme like the below:
+    ```yaml
+    theme:
+    name: 'material'
+    ```
+
+    Or, you can use `ReadtheDocs` theme by ```pip install mkdocs-rtd-dropdown``` and then,
+    ```yaml
+    theme:
+        name: 'material'
+    ```
 
 ##  
