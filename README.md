@@ -29,7 +29,19 @@
     This is same to ```python setup.py bdist_wheel```
     > reference: https://pypa-build.readthedocs.io/en/stable/
 
-## 3. Docs
+## 3. unit tests
+
+- Install
+    ```
+    pip install coverage pytest-cov
+    ```
+
+- Execute
+    ```
+    pytest --cov
+    ```
+
+## 4. Docs
 
 #### mkdocs 
 
@@ -57,6 +69,14 @@
         name: 'material'
     ```
 
+- Add modules' docs
+    in the `docs/<page name>.md`, add the below
+    ```
+    ::: project.src.calculator
+    ```
+
+    Then, the docstrings written in the `project/src/calculator.py` will be displayed in the mkdocs page.
+
 - Deploy MKDocs pages *in the github*
     ```
     mkdocs gh-deploy
@@ -64,15 +84,3 @@
     Then, you can see the mkdocs pages at `https://<github ID>.github.io/<repository name>`
 
 #### sphinx
-
-## 4. unit tests
-
-- Install
-    ```
-    pip install coverage pytest-cov
-    ```
-
-- Execute
-    ```
-    pytest --cov
-    ```
