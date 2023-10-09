@@ -1,0 +1,76 @@
+# https://github.com/pre-commit/pre-commit-hooks/blob/main/README.md
+
+exclude: 'docs/'
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: check-case-conflict
+      - id: check-yaml
+      - id: check-docstring-first
+      # - id: double-quote-string-fixer
+      - id: detect-private-key
+
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v3.14.0
+    hooks:
+      - id: pyupgrade
+        name: Upgrade code
+
+  - repo: https://github.com/PyCQA/isort
+    rev: 5.12.0
+    hooks:
+      - id: isort
+        name: Sort imports
+
+  # - repo: https://github.com/psf/black
+  #   rev: 23.9.1
+  #   hooks:
+  #     - id: black
+
+  - repo: https://github.com/google/yapf
+    rev: v0.40.2
+    hooks:
+      - id: yapf
+        name: YAPF formatting
+
+  - repo: https://github.com/executablebooks/mdformat
+    rev: 0.7.17
+    hooks:
+      - id: mdformat
+        name: MD formatting
+        additional_dependencies:
+          - mdformat-gfm
+          - mdformat-black
+        # exclude: "README.md|README.zh-CN.md|CONTRIBUTING.md"
+
+  # - repo: https://github.com/myint/autoflake
+  #   rev: v1.4
+  #   hooks:
+  #     - id: autoflake
+  #       args:
+  #         - --in-place
+  #         - --remove-unused-variables
+  #         - --remove-all-unused-imports
+  #         - --expand-star-imports
+
+  - repo: https://github.com/PyCQA/flake8
+    rev: 6.1.0
+    hooks:
+      - id: flake8
+        name: PEP8
+
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.2.6
+    hooks:
+      - id: codespell
+        args:
+          - --ignore-words-list=crate,nd,strack,dota,ane,segway,fo
+
+  - repo: https://github.com/PyCQA/docformatter
+    rev: v1.7.5
+    hooks:
+      - id: docformatter

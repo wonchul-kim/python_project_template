@@ -104,3 +104,13 @@
 ## 5. Code style/format in the process of pre-commit
 
 - [x] .pre-commit-config.yaml
+    - [x] pre-commit-hooks
+    - [x] pyupgrade
+    - [x] isort
+    - [x] yapf
+    - [x] mdformat
+    - [x] autoflake
+    - [x] flake8
+    - [x] codespell
+    - [x] docformatter
+
