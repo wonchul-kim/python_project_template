@@ -56,4 +56,9 @@
         name: 'material'
     ```
 
+- Deploy MKDocs pages
+    ```
+    mkdocs gh-deploy
+    ```
+
 ##  
