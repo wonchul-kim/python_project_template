@@ -69,13 +69,23 @@
         name: 'material'
     ```
 
-- Add modules' docs
+- Add each module's page in docs
     in the `docs/<page name>.md`, add the below
     ```
     ::: project.src.calculator
     ```
 
     Then, the docstrings written in the `project/src/calculator.py` will be displayed in the mkdocs page.
+
+    Then, add that page in the `nav` in `mkdocs.yml`,
+    ```
+    nav:
+      - main: index.md
+      - project: project.md
+      - calculation: calculation.md
+
+    ```
+    This will be displayed in the side-bar
 
 - Serve locally
     ```
@@ -90,3 +100,7 @@
     Then, you can see the mkdocs pages at `https://<github ID>.github.io/<repository name>`
 
 #### sphinx
+
+## 5. Code style/format in the process of pre-commit
+
+- [x] .pre-commit-config.yaml
