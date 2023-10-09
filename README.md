@@ -77,6 +77,12 @@
 
     Then, the docstrings written in the `project/src/calculator.py` will be displayed in the mkdocs page.
 
+- Serve locally
+    ```
+    mkdocs serve
+    ```
+    Then, access to `https://127.0.0.1:8000` or `https://localhost:8000`
+
 - Deploy MKDocs pages *in the github*
     ```
     mkdocs gh-deploy
