@@ -28,6 +28,8 @@
 
   Then, pre-commit-config configuration will be defined in .git
 
+> Codes defined and already pushed into the repository before setting `pre-commit` will not be considered!!!
+
 ## 3. unit tests
 
 - Install
