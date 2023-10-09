@@ -125,6 +125,7 @@
   - [x] pyupgrade
   - [x] isort
   - [x] yapf
+  - [x] black
   - [x] mdformat
   - [x] autoflake
   - [x] flake8
