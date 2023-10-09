@@ -56,9 +56,9 @@
         name: 'material'
     ```
 
-- Deploy MKDocs pages
+- Deploy MKDocs pages *in the github*
     ```
     mkdocs gh-deploy
     ```
-
+    Then, you can see the mkdocs pages at `https://<github ID>.github.io/<repository name>`
 ##  
