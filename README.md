@@ -17,13 +17,16 @@
 ####  To distribute/deploy a package
 
 - Install the below
-```
-pip install 'build[virtualenv]'
-```
+    ```
+    pip install 'build[virtualenv]'
+    ```
 
 - Execute the below command to make package
-```python -m build --wheel``` or ```python setup.py bdist_wheel```
+    ```
+    python -m build --wheel
+    ``` 
 
+    This is same to ```python setup.py bdist_wheel```
     > reference: https://pypa-build.readthedocs.io/en/stable/
 
 ## 3. Consider code style/format
