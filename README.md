@@ -36,6 +36,7 @@
 - Install
 
   ```
+  pip install pytest
   pip install coverage pytest-cov
   ```
 
