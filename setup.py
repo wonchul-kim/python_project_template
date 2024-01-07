@@ -8,7 +8,7 @@ PARENT = FILE.parent
 README = (PARENT / 'README.md').read_text(encoding='utf-8')
 
 def get_version():
-    file = PARENT / 'project/__init__.py'
+    file = PARENT / 'my_project/version.py'
     
     return re.search(r'^__version__ = [\'"]([^\'"]*)[\'"]', file.read_text(encoding='utf-8'), re.M)[1]
 
@@ -25,7 +25,7 @@ def parse_requirements(file_path: Path):
     return requirements 
 
 version=get_version()
-packages=['project'] + [str(x) for x in Path('project').rglob('*/') if x.is_dir() and '__' not in str(x)]
+packages=['my_project'] + [str(x) for x in Path('my_project').rglob('*/') if x.is_dir() and '__' not in str(x)]
 install_requires=parse_requirements(PARENT / 'requirements.txt')
 
 setup(
@@ -34,7 +34,7 @@ setup(
     description=('Template for Python Project'),
     long_description=README,
     long_description_content_type='text/makrdown',
-    packages=['project'] + [str(x) for x in Path('athena').rglob('*/') if x.is_dir() and '__' not in str(x)],
+    packages=['my_project'] + [str(x) for x in Path('athena').rglob('*/') if x.is_dir() and '__' not in str(x)],
     package_data={
         '': ['*.yaml'],
     },
